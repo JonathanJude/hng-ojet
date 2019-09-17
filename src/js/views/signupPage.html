@@ -1,6 +1,10 @@
 <!-- Registration Page -->
-<div id="form-container" class="oj-form-layout">
-    <div class="oj-form">
+<div class="oj-hybrid-padding oj-panel">
+    <h1>Registration</h1>
+    <div id="signup-form" class="oj-form-layout">
+
+
+        <div class="oj-form"></div>
         <div class="oj-flex">
             <div class="oj-flex-item">
                 <label id="fullname">Full Name</label>
@@ -37,7 +41,7 @@
             <div class="oj-flex-item">
                 <label for="stackcombobox">Stack</label>
                 <input id="stackcombobox" list="stack" data-bind="ojComponent: {component: 'ojCombobox', 
-                                                    multiple: true, value: val,
+                                                    multiple: true, value: stack,
                                                     rootAttributes: {style:'max-width:20em'}}" />
                 <datalist id="stack">
                         <option value="Javascript">Javascript</option>
@@ -78,4 +82,6 @@
             </div>
         </div>
     </div>
+    <span class="oj-link" data-bind="click: loginClick"><a>Already a member? Login</a></span>
+</div>
 </div>

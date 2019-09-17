@@ -21,7 +21,9 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
             // Router setup
             self.router = oj.Router.rootInstance;
             self.router.configure({
-                'dashboard': { label: 'Dashboard', isDefault: true },
+                'signupPage': { label: 'Signup', isDefault: true },
+                'loginPage': { label: 'Login' },
+                'dashboard': { label: 'Dashboard' },
             });
             oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
 

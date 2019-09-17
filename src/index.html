@@ -84,18 +84,18 @@
             <header role="banner" class="oj-web-applayout-header">
                 <div class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center">
                     <!-- Offcanvas toggle button -->
-                    <div class="oj-flex-bar-start oj-md-hide">
+                    <!-- <div class="oj-flex-bar-start oj-md-hide">
                         <button id="drawerToggleButton" class="oj-button-lg" data-bind="click: toggleDrawer,
                 ojComponent: {component:'ojButton', label: 'Application Navigation',
                 chroming: 'half', display: 'icons', icons: {start: 'oj-web-applayout-offcanvas-icon'}}">
               </button>
-                    </div>
+                    </div> -->
                     <div data-bind="css: smScreen() ? 'oj-flex-bar-center-absolute' : 'oj-flex-bar-middle oj-sm-align-items-baseline'">
                         <span role="img" class="oj-sm-only-hide oj-icon demo-oracle-icon" title="Oracle Logo" alt="Oracle Logo"></span>
                         <h1 class="oj-web-applayout-header-title" title="Application Name" data-bind="text: appName"></h1>
                     </div>
-                    <div class="oj-flex-bar-end">
-                        <!-- Responsive Toolbar -->
+                    <!-- <div class="oj-flex-bar-end">
+                        Responsive Toolbar
                         <div data-bind="ojComponent: {component:'ojToolbar'}">
                             <button id="userMenu" data-bind="ojComponent: {component: 'ojButton', label: userLogin,
                   display: smScreen() ? 'icons' : 'all',
@@ -108,16 +108,16 @@
                                 <li id="about"><a href="#">About</a></li>
                                 <li id="out"><a href="#">Sign Out</a></li>
                             </ul>
-                        </div>
-                    </div>
                 </div>
-                <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+        </div> -->
+                </div>
+                <!-- <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
                     <div data-bind="ojComponent: {component: 'ojNavigationList',
               navigationLevel: 'application',
               item: {template: 'navTemplate'}, data: navDataSource,
               selection: router.stateId, edge: 'top'}" class="oj-web-applayout-navbar oj-sm-only-hide oj-md-condense oj-md-justify-content-flex-end">
                     </div>
-                </div>
+                </div> -->
             </header>
             <div role="main" class="oj-web-applayout-max-width oj-web-applayout-content" data-bind="ojModule: router.moduleConfig">
             </div>

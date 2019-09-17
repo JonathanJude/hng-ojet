@@ -1,15 +1,37 @@
 <!-- Login Page -->
-<div id="div1">
-    <span class="oj-label">Sign In</span>
-    <form id="loginForm" method="get">
+<div class="oj-hybrid-padding oj-panel">
+    <h1>Login</h1>
+    <div id="login-form" class="oj-form-layout">
+        <div class="oj-form">
 
-        <label for="text-user">Username:</label>
-        <input id="text-user" type="text" data-bind="ojComponent: {component: 'ojInputText', value: user, required:true}" />
+            <div class="oj-flex">
+                <div class="oj-flex-item">
+                    <label for="userlogin">Username or Email</label>
+                    <input type="text" id="userlogin" data-bind="ojComponent: {component: 'ojInputText', value: userlogin, required: true}">
+                </div>
+            </div>
 
-        <label for="text-password">Password:</label>
-        <input id="text-password" type="password" data-bind="ojComponent: {component: 'ojInputPassword', value: password, required:true}" />
+            <div class="oj-flex">
+                <div class="oj-flex-item">
+                    <label id="password">Password</label>
+                    <div class="oj-form-control-group" aria-labelledby="password" role="group">
+                        <input type="password" aria-label="password" data-bind="ojComponent: {component: 'ojInputPassword', value: password, required: true}">
+                    </div>
+                </div>
+            </div>
 
-        <br/><br/>
-        <input type=submit>
-    </form>
+            <div class="oj-flex">
+                <div class="submit-container">
+                    <button class="oj-button-primary oj-button-xl" data-bind="click: verifyInfo,
+                      ojComponent: {
+                        component:'ojButton', label: 'Sign In!',
+                        icons: {start:'oj-fwk-icon oj-fwk-icon-clock'},
+                        chroming: 'full', 
+                   }">
+                 </button>
+                </div>
+            </div>
+        </div>
+        <span class="oj-link" data-bind="click: signupClick"><a>Not a member? Sign up</a></span>
+    </div>
 </div>
