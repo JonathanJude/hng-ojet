@@ -6,7 +6,7 @@
  * Your dashboard ViewModel code goes here
  */
 define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinputtext', 'ojs/ojbutton'],
-    function(oj, ko, $) {
+    function (oj, ko, $) {
 
         function SignupPageViewModel() {
             var self = this;
@@ -21,11 +21,44 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
             self.location = ko.observable();
             self.password = ko.observable();
             self.verifyPassword = ko.observable();
-            self.submitInfo = function() {
+            self.submitInfo = function () {
                 console.log("Button clicked..")
 
             };
-            self.loginClick = function() {
+
+            //perform login logic
+
+            var data = {
+                "username": "janedoe",
+                "password": "jane"
+            }
+            $.getJSON("https://volunteerng.herokuapp.com/api/login.php", data, function (res, textState, jqXHR) {
+                // oj.Router.rootInstance.go('loginPage');
+
+
+
+            });
+
+            // self.data = ko.observableArray();
+            // $.getJSON("https://volunteerng.herokuapp.com/api/login.php").
+            // then(function (movies) {
+            //     $.each(movies, function () {
+            //         self.data.push({
+            //             title: this.title,
+            //             director: this.director,
+            //             releaseYear: this.releaseYear,
+            //             genre: this.genre
+            //         });
+            //     });
+            // });
+            // self.dataSource = new oj.ArrayTableDataSource(
+            //     self.data, {
+            //         idAttribute: 'title'
+            //     }
+            // );
+
+
+            self.loginClick = function () {
 
                 oj.Router.rootInstance.go('loginPage');
 
@@ -45,7 +78,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
              * @return {Promise|undefined} - If the callback returns a Promise, the next phase (attaching DOM) will be delayed until
              * the promise is resolved
              */
-            self.handleActivated = function(info) {
+            self.handleActivated = function (info) {
                 // Implement if needed
             };
 
@@ -58,7 +91,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
              * @param {Function} info.valueAccessor - The binding's value accessor.
              * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
              */
-            self.handleAttached = function(info) {
+            self.handleAttached = function (info) {
                 // Implement if needed
             };
 
@@ -71,7 +104,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
              * @param {Node} info.element - DOM element or where the binding is attached. This may be a 'virtual' element (comment node).
              * @param {Function} info.valueAccessor - The binding's value accessor.
              */
-            self.handleBindingsApplied = function(info) {
+            self.handleBindingsApplied = function (info) {
                 // Implement if needed
             };
 
@@ -83,7 +116,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
              * @param {Function} info.valueAccessor - The binding's value accessor.
              * @param {Array} info.cachedNodes - An Array containing cached nodes for the View if the cache is enabled.
              */
-            self.handleDetached = function(info) {
+            self.handleDetached = function (info) {
                 // Implement if needed
             };
         }
