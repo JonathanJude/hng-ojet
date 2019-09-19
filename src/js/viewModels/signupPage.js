@@ -11,9 +11,9 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
         function SignupPageViewModel() {
             var self = this;
 
-            self.firstName = ko.observable();
-            self.middleName = ko.observable();
-            self.lastName = ko.observable();
+            self.firstname = ko.observable();
+            self.middlename = ko.observable();
+            self.lastname = ko.observable();
             self.email = ko.observable();
             self.username = ko.observable();
             self.phone = ko.observable();
@@ -95,9 +95,16 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojselectcombobox', 'ojs/ojinput
                 // Implement if needed
             };
 
+
+            self.handleBindingsApplied = function (info) {
+                // Implement if needed
+            };
+
+
             self.handleDetached = function (info) {
                 // Implement if needed
             };
+
         }
 
 

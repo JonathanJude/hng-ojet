@@ -54,21 +54,21 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
             // Application Name used in Branding Area
             self.appName = ko.observable("OJET TEAM 7");
             // User Info used in Global Navigation area
-            self.userLogin = ko.observable("john.hancock@oracle.com");
+            self.userLogin = ko.observable("");
 
             // Footer
-            function footerLink(name, id, linkTarget) {
-                this.name = name;
-                this.linkId = id;
-                this.linkTarget = linkTarget;
-            }
-            self.footerLinks = ko.observableArray([
-                new footerLink('About Oracle', 'aboutOracle', 'http://www.oracle.com/us/corporate/index.html#menu-about'),
-                new footerLink('Contact Us', 'contactUs', 'http://www.oracle.com/us/corporate/contact/index.html'),
-                new footerLink('Legal Notices', 'legalNotices', 'http://www.oracle.com/us/legal/index.html'),
-                new footerLink('Terms Of Use', 'termsOfUse', 'http://www.oracle.com/us/legal/terms/index.html'),
-                new footerLink('Your Privacy Rights', 'yourPrivacyRights', 'http://www.oracle.com/us/legal/privacy/index.html')
-            ]);
+            // function footerLink(name, id, linkTarget) {
+            //     this.name = name;
+            //     this.linkId = id;
+            //     this.linkTarget = linkTarget;
+            // }
+            // self.footerLinks = ko.observableArray([
+            //     new footerLink('About Oracle', 'aboutOracle', 'http://www.oracle.com/us/corporate/index.html#menu-about'),
+            //     new footerLink('Contact Us', 'contactUs', 'http://www.oracle.com/us/corporate/contact/index.html'),
+            //     new footerLink('Legal Notices', 'legalNotices', 'http://www.oracle.com/us/legal/index.html'),
+            //     new footerLink('Terms Of Use', 'termsOfUse', 'http://www.oracle.com/us/legal/terms/index.html'),
+            //     new footerLink('Your Privacy Rights', 'yourPrivacyRights', 'http://www.oracle.com/us/legal/privacy/index.html')
+            // ]);
         }
 
         return new ControllerViewModel();
